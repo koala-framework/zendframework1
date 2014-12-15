@@ -56,7 +56,7 @@ class Scaffolder
 		$this->log('Applied transforms.');
 		
 		// Show "to do" message
-		$contentRoot = realpath($rootPath . '/PhpOnAzure.Web');
+		$contentRoot = realpath($rootPath . '/PhpOnAzure_Web');
 		echo "\r\n";
 		echo "Note: before packaging your application, please copy your application code to $contentRoot";
 	}

@@ -2,7 +2,7 @@
 <ServiceDefinition name="PhpOnAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
   <WebRole name="PhpOnAzure.Web" enableNativeCodeExecution="true">
     <Sites>
-      <Site name="Web" physicalDirectory="./PhpOnAzure.Web">
+      <Site name="Web" physicalDirectory="./PhpOnAzure_Web">
         <Bindings>
           <Binding name="Endpoint1" endpointName="HttpEndpoint" />
         </Bindings>
