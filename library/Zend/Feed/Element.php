@@ -193,7 +193,11 @@ class Zend_Feed_Element implements ArrayAccess
         if ($length == 1) {
             return new Zend_Feed_Element($nodes[0]);
         } elseif ($length > 1) {
-            return array_map(create_function('$e', 'return new Zend_Feed_Element($e);'), $nodes);
+            $elements = array();
+            foreach ($nodes as $node) {
+                $elements[] = new Zend_Feed_Element($node);
+            }
+            return $elements;
         } else {
             // When creating anonymous nodes for __set chaining, don't
             // call appendChild() on them. Instead we pass the current
